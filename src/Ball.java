@@ -1,12 +1,5 @@
 class Ball {
 
-    /*
-     * In Processing, the Sketch works a lot like the World in the turtles. You
-     * can't
-     * draw a ball without knowing which sketch to draw it on, so you always need to
-     * specify the sketch for a Ball object.
-     */
-
     /** The sketch that the ball is inside */
     private Sketch s;
     /** the radius of the ball */
@@ -22,7 +15,9 @@ class Ball {
     /** The color of the outside of the ball */
     private int borderColor;
 
-    /** Empty constructor to keep the defaults. Only sets up our link. */
+    /** 
+     * Constructors that help initialize the attributes of the objects
+     */
     public Ball(Sketch sketch) {
         s = sketch;
         radius = 20;
@@ -34,8 +29,9 @@ class Ball {
         borderColor = s.color(0, 0, 0);
     }
 
-    /** Fully specified constructor to allow changes to size, position, speed */
-    /** Does NOT allow changing color! Need to use setColors() for that. */
+    /** 
+     * More contructors that help initialize Ball for all the attributes below 
+     */
     public Ball(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;
@@ -63,8 +59,9 @@ class Ball {
         return y;
     }
 
-    // Setters that you need go here - by default, only colors
-
+    /**
+     * Helps sketch in further defining the color for Ball
+     */
     public void setColors(int fill, int border) {
         borderColor = border;
         fillColor = fill;

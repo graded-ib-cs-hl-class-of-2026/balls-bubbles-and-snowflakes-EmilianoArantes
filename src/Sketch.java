@@ -2,7 +2,9 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
-    /** Represents one ball */
+    /** 
+     * The referance and help store all the ball, bubble, and snowflake instance variables
+     */
     private Ball ball1;
     private Ball ball2;
     private Ball ball3;
@@ -27,8 +29,8 @@ public class Sketch extends PApplet {
     }
 
     /**
-     * Runs once at the beginning of the program, after the window is created. Use
-     * this to initialize the sketch.
+     * Runs once at the beginning of the program, after the window is created. 
+     * Helps determine all specific attributes of each instance variable, determening thier specific behaviour.
      */
     public void setup() {
 

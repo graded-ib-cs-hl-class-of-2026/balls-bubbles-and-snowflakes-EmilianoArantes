@@ -1,10 +1,8 @@
-/** THE ENTIRE CLASS IS INSIDE A COMMENT RIGHT NOW. TO ENABLE THE CLASS, DELETE THIS LINE AND THE LAST ONE. */
 
 class Bubble {
-
-    //MISSING MANY INSTANCE VARIABLES
-
-    //MISSING CONSTRUCTORS
+    /**
+    * Instance variables listed below, used to store the state of the objects in a class  
+    */
     private float radius;
     private Sketch s;
     private float y;
@@ -13,8 +11,10 @@ class Bubble {
     private int fillColor;
     private float xSpeed;
     private float ySpeed;
-
-
+ 
+    /** 
+    * Constructors shown below, used to initialize new objects of a class
+    */
     public Bubble(Sketch sketch) {
         s = sketch;
         radius = 20;
@@ -26,8 +26,9 @@ class Bubble {
         borderColor = s.color(255, 255, 255);
     }
 
-
-    // accessors for the radius, diameter, x, and y values 
+    /** 
+    * More constructors shown below
+    */
     public Bubble(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;
@@ -52,18 +53,24 @@ class Bubble {
     public float getY() {
         return y;
     }
+    /** 
+    * Used to help set the color of the bubbles in sketch
+    */ 
     public void setColors(int fill, int border) {
         borderColor = border;
         fillColor = fill;
     }
-
-
+    /** 
+    * Used to make the bubbles be visible
+    */ 
     public void draw() {
         s.stroke(borderColor);
         s.fill(fillColor);
         s.circle(x, y, radius*2);
     }
-
+    /** 
+    * Used to make the bubbles move around the screen and ensures the ball is draw at a different place than before
+    */
     public void move() {
         x = x + xSpeed;
         y = y + ySpeed;
